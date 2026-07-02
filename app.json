@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "NextBite",
+    "slug": "nextbite",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "scheme": "nextbite",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.sammi.nextbite",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "用你嘅位置探索附近值得發現嘅餐廳。",
+        "NSCameraUsageDescription": "用相機影低餐點，估算卡路里同營養。",
+        "NSPhotoLibraryUsageDescription": "揀一張餐點相，估算卡路里同營養。"
+      }
+    },
+    "android": {
+      "package": "com.sammi.nextbite"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Use your location to explore nearby restaurants on the map."
+        }
+      ],
+      "expo-image-picker",
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsVersion": "11.20.1"
+        }
+      ]
+    ]
+  }
+}

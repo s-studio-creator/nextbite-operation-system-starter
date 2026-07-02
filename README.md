@@ -22,7 +22,6 @@ NextBite is a premium consumer mobile app for real-world food exploration. The p
 - `hooks/` - Shared React hooks.
 - `stores/` - Zustand state stores.
 - `types/` - Shared TypeScript types.
-- `src/` - Existing legacy screens, storage, data, and utilities being consolidated over time.
 - `docs/` - Product, architecture, design, process, roadmap, and AI-agent operating documentation.
 - `workflow/` - AI operating loop and sprint process.
 - `prompts/` - Role prompts for Hermes, OpenClaw, and ChatGPT review.

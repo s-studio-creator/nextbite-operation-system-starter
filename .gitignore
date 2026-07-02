@@ -6,3 +6,5 @@ web-build/
 .env.local
 .DS_Store
 npm-debug.log*
+expo-qr.png
+expo-qr.svg
