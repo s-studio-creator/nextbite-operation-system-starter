@@ -11,7 +11,7 @@ The complete operating loop is documented in [`workflow/AI_OPERATING_SYSTEM.md`]
 ## Team Structure
 
 - CEO: owns product priorities and roadmap.
-- Hermes: owns sprint planning and project management.
+- Hermes: owns sprint recommendations and project management.
 - OpenClaw: owns engineering execution for the current sprint.
 - CTO: owns architecture and technical quality.
 - Engineer: implements production code.
@@ -31,24 +31,28 @@ Agent role definitions live in [`docs/agents`](agents/).
 ## Communication Flow
 
 1. Sammi defines what to build.
-2. Hermes turns the decision into `CURRENT_SPRINT.md` and GitHub Issues.
-3. OpenClaw implements only the current sprint.
-4. OpenClaw opens a pull request.
-5. ChatGPT reviews architecture, code, UX, and QA risk.
-6. Sammi approves or rejects merge.
-7. Hermes prepares the next sprint.
+2. Hermes recommends sprint scope from the roadmap and backlog.
+3. Sammi approves the sprint.
+4. Hermes turns the approved sprint into `CURRENT_SPRINT.md` and GitHub Issues.
+5. OpenClaw implements only the current sprint.
+6. OpenClaw opens a pull request.
+7. ChatGPT reviews architecture, code, UX, and QA risk.
+8. Sammi approves or rejects merge.
+9. Hermes recommends the next sprint.
 
 ## Sprint Workflow
 
 1. Ask: what is today's only goal?
 2. Ask: what counts as complete?
 3. Ask: what is not allowed?
-4. Hermes writes `CURRENT_SPRINT.md`.
-5. OpenClaw implements only that sprint.
-6. OpenClaw runs verification and opens a PR.
-7. ChatGPT reviews.
-8. Sammi approves merge.
-9. Hermes records sprint completion and prepares the next sprint.
+4. Hermes recommends sprint scope.
+5. Sammi approves sprint scope.
+6. Hermes writes `CURRENT_SPRINT.md`.
+7. OpenClaw implements only that sprint.
+8. OpenClaw runs verification and opens a PR.
+9. ChatGPT reviews.
+10. Sammi approves merge.
+11. Hermes records sprint completion and recommends the next sprint.
 
 ## Definition of Done
 
@@ -71,6 +75,7 @@ A task is done when:
 - Keep changes small, reviewable, and scoped.
 - Preserve existing user work.
 - `CURRENT_SPRINT.md` is the engineering contract.
+- Hermes recommends; Sammi approves.
 - Backlog items are not sprint scope.
 - Icebox items are intentionally inactive.
 

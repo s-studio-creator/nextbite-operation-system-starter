@@ -1,0 +1,34 @@
+# NextBite CODEOWNERS
+#
+# This file keeps review ownership explicit as the repository grows.
+# Sammi remains the final product and release approver.
+
+* @s-studio-creator
+
+# Product operating system
+docs/agents/ @s-studio-creator
+docs/SPRINTS.md @s-studio-creator
+docs/ROADMAP.md @s-studio-creator
+CURRENT_SPRINT.md @s-studio-creator
+BACKLOG.md @s-studio-creator
+ICEBOX.md @s-studio-creator
+workflow/ @s-studio-creator
+
+# GitHub process
+.github/ISSUE_TEMPLATE/ @s-studio-creator
+.github/workflows/ @s-studio-creator
+
+# Architecture and product source of truth
+docs/ARCHITECTURE.md @s-studio-creator
+docs/DECISIONS.md @s-studio-creator
+docs/PRODUCT_BIBLE.md @s-studio-creator
+
+# Application code
+app/ @s-studio-creator
+components/ @s-studio-creator
+hooks/ @s-studio-creator
+stores/ @s-studio-creator
+types/ @s-studio-creator
+constants/ @s-studio-creator
+src/ @s-studio-creator
+lib/ @s-studio-creator

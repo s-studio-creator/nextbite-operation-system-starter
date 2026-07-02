@@ -20,6 +20,7 @@ Implement only the current sprint.
 - Stop when all acceptance criteria are complete.
 - Do not add out-of-scope features.
 - Do not decide product direction.
+- Do not start backlog or icebox items.
 - Do not redesign UI.
 - Do not add backend integration unless explicitly in sprint scope.
 

@@ -68,6 +68,7 @@ Mapbox does not run in Expo Go. Use a development build for device testing.
 - [Sprints](docs/SPRINTS.md)
 - [Agent Roles](docs/agents/)
 - [AI Operating System](workflow/AI_OPERATING_SYSTEM.md)
+- [Project Decisions](workflow/PROJECT_DECISIONS.md)
 - [Current Sprint](CURRENT_SPRINT.md)
 - [Backlog](BACKLOG.md)
 - [Icebox](ICEBOX.md)
