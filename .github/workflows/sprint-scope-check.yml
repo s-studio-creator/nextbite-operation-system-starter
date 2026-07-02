@@ -1,0 +1,42 @@
+name: Sprint Scope Check
+
+on:
+  pull_request:
+    types: [opened, synchronize, edited]
+    branches: [main]
+
+jobs:
+  check-scope:
+    name: Verify Scope
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read CURRENT_SPRINT.md
+        id: sprint
+        run: |
+          echo "sprint<<EOF" >> $GITHUB_OUTPUT
+          cat CURRENT_SPRINT.md >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+      - name: Check PR branch convention
+        id: branch-check
+        run: |
+          BRANCH="${{ github.head_ref }}"
+          if echo "$BRANCH" | grep -qiE '^(feature|fix|chore|docs)/[a-z0-9._-]+$'; then
+            echo "Branch name follows convention: $BRANCH"
+          else
+            echo "⚠️ Branch name may not follow convention: $BRANCH"
+            echo "Expected: feature/xxx, fix/xxx, chore/xxx, or docs/xxx"
+          fi
+      - name: PR Requirements Reminder
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const sprintNum = process.env.SPRINT || 'current';
+            core.summary.addRaw(`## 📋 PR Checklist\n\n`);
+            core.summary.addRaw(`- [ ] PR description explains what and why\n`);
+            core.summary.addRaw(`- [ ] Links to sprint task issue(s)\n`);
+            core.summary.addRaw(`- [ ] Only implements **${sprintNum}** sprint scope\n`);
+            core.summary.addRaw(`- [ ] \`npm run typecheck\` passes\n`);
+            core.summary.addRaw(`- [ ] No unrelated refactors\n`);
+            core.summary.addRaw(`- [ ] AI Operating Manual rules followed\n`);
+            core.summary.write();

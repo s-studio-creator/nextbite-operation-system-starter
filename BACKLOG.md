@@ -1,31 +1,98 @@
 # Backlog
 
-Backlog items are candidates for future sprints. They are not approved scope until moved into `CURRENT_SPRINT.md`.
+Sprint-queued tasks that Hermes has prioritized for upcoming sprints.
 
-## Explore
+---
 
-- Improve Mapbox permission states.
-- Confirm development build setup.
-- Add restaurant markers.
-- Add restaurant bottom sheet.
-- Add Walk There action.
-- Add QA checklist for GPS behavior.
+## Sprint 002 (Next)
 
-## Repository
+### Explore Product Quality
 
-- Decide whether to merge this operating-system repo into the main app repo.
-- Create `.github` issue templates after the manual sprint loop is stable.
-- Create release note template after Sprint 001 completes.
+- [ ] Restaurant markers on map
+- [ ] Restaurant bottom sheet
+- [ ] Walk There action
+- [ ] Improve marker selection states
+- [ ] Add better loading and permission states
+- [ ] Add Mapbox development-build instructions
+- [ ] Stabilize mock data shape for future backend
+- [ ] Add QA checklist for location flows
 
-## Product
+### Repository Consolidation
 
-- Restaurant detail decision flow.
-- Saved collections.
-- Draw card flow.
-- Social challenges.
-- Profile achievements.
+- [ ] Decide how legacy `src/` screens map into the new Expo Router structure
+- [ ] Move only active product flows into the new architecture
+- [ ] Avoid large, unrelated rewrites
 
-## Rules
+---
 
-- Backlog is not sprint scope.
-- Every item needs CEO approval before entering a sprint.
+## Sprint 003 (Future)
+
+### Restaurant Decision Flow
+
+- [ ] Restaurant detail page
+- [ ] Menu recommendation
+- [ ] Calories, protein, health score, and walking distance display
+- [ ] Save restaurant action
+
+---
+
+## Sprint 004 (Future)
+
+### Draw
+
+- [ ] Discovery card reveal
+- [ ] Food category recommendation
+- [ ] Clear next action after reveal
+
+---
+
+## Sprint 005 (Future)
+
+### Saved
+
+- [ ] Manual saves
+- [ ] Collections
+- [ ] Future link import from Instagram, TikTok, Xiaohongshu
+
+---
+
+## Sprint 006 (Future)
+
+### Social
+
+- [ ] Friend challenges
+- [ ] Healthy meal streaks
+- [ ] Water and walking challenges
+- [ ] Minimal reactions
+
+---
+
+## Sprint 007 (Future)
+
+### Profile
+
+- [ ] Food collection
+- [ ] Achievements
+- [ ] Badges
+- [ ] Walking history
+
+---
+
+## Sprint 008 (Future)
+
+### Backend
+
+- [ ] Restaurant data source
+- [ ] User accounts
+- [ ] Sync and persistence
+- [ ] Recommendation services
+
+---
+
+## Process
+
+Hermes moves items from ICEBOX → BACKLOG → CURRENT_SPRINT.md as they are prioritized.
+
+- **ICEBOX.md**: Long-term ideas, not yet prioritized
+- **BACKLOG.md**: Organized into future sprints, Hermes-managed
+- **CURRENT_SPRINT.md**: Active sprint, single source of truth for OpenClaw
