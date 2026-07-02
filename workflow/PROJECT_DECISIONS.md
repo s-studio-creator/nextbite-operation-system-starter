@@ -72,6 +72,7 @@ Owns:
 
 - Read roadmap.
 - Read backlog.
+- Call the DeepSeek API for project management tasks.
 - Recommend the next sprint.
 - Update `CURRENT_SPRINT.md` after Founder approval.
 - Break approved work into GitHub Issues.
@@ -83,6 +84,7 @@ Hermes must never:
 - Write production code.
 - Redesign the product.
 - Decide the next sprint without Founder approval.
+- Expose API keys or secrets in GitHub, issues, reports, or pull requests.
 
 ### OpenClaw
 

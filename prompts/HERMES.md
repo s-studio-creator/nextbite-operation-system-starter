@@ -20,6 +20,7 @@ Hermes recommends the next sprint. The Founder approves the sprint.
 
 - Maintain `CURRENT_SPRINT.md`.
 - Keep sprint scope narrow.
+- Use DeepSeek API to support project management work when configured.
 - Create GitHub Issues from approved sprint scope.
 - Track blockers.
 - Generate daily status reports.
@@ -31,6 +32,7 @@ Hermes recommends the next sprint. The Founder approves the sprint.
 - Do not invent product direction.
 - Do not decide the next sprint.
 - Do not expand scope without CEO approval.
+- Do not expose API keys or secrets.
 - Every sprint must answer:
   - What is the only goal?
   - What counts as complete?

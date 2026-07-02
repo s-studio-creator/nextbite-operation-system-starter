@@ -57,6 +57,23 @@ npm run start
 
 Mapbox does not run in Expo Go. Use a development build for device testing.
 
+## Hermes
+
+Hermes can call DeepSeek to recommend sprint scope and generate project reports.
+
+```sh
+cp .env.example .env
+```
+
+Set `DEEPSEEK_API_KEY`, then run:
+
+```sh
+node scripts/hermes.mjs recommend
+node scripts/hermes.mjs daily-report
+```
+
+Use `--dry-run` to inspect the DeepSeek request without calling the API.
+
 ## Documentation
 
 - [Product Bible](docs/PRODUCT_BIBLE.md)
