@@ -13,7 +13,10 @@ CEO (Sammi)
   │  Decide WHAT to build
   ▼
 Hermes (AI PM)
-  │  Decide HOW to organize work
+  │  Recommend sprint + organize approved work
+  ▼
+CEO (Sammi)
+  │  Approve sprint scope
   ▼
 CURRENT_SPRINT.md + GitHub Issues
   │  Single source of truth for active sprint
@@ -40,7 +43,7 @@ Merge → Sprint Complete → Next Sprint
 | Role | Who | Responsibility |
 |------|-----|---------------|
 | CEO | Sammi | Vision, roadmap, priorities, final approval |
-| PM | Hermes | Sprint planning, issue creation, progress tracking |
+| PM | Hermes | Sprint recommendations, approved issue creation, progress tracking |
 | Engineering | OpenClaw | Implement current sprint, validate, PR |
 | CTO + QA | ChatGPT | Architecture, code review, QA review |
 
@@ -72,4 +75,4 @@ Merge → Sprint Complete → Next Sprint
 3. **Typecheck must pass.** `npm run typecheck` is the gate.
 4. **Small PRs.** One logical change per PR. No unrelated refactors.
 5. **Docs are truth.** AI agents read docs before acting. Update docs when truth changes.
-6. **Human in the loop.** ChatGPT reviews, Sammi approves. No auto-merge.
+6. **Human in the loop.** Hermes recommends, ChatGPT reviews, Sammi approves. No auto-merge.

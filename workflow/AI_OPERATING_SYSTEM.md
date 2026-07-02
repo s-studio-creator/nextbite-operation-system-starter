@@ -10,7 +10,8 @@ GitHub is the single source of truth. Agents must not rely on chat memory when r
 
 ```text
 Sammi Founder / CEO
-  -> Hermes Project Manager
+  -> Hermes Project Manager recommends sprint
+  -> Sammi approves sprint
   -> GitHub Repository
   -> CURRENT_SPRINT.md + Issues + Backlog
   -> OpenClaw Engineering
@@ -19,7 +20,8 @@ Sammi Founder / CEO
   -> ChatGPT CTO + QA Review
   -> Sammi Approves Merge
   -> Sprint Complete
-  -> Hermes Creates Next Sprint
+  -> Hermes Recommends Next Sprint
+  -> Sammi Approves Next Sprint
 ```
 
 ## Roles
@@ -31,6 +33,7 @@ Owns:
 - Vision.
 - Roadmap.
 - Priority.
+- Sprint approval.
 - Final product decisions.
 - PR approval.
 - Shipping decision.
@@ -45,7 +48,7 @@ Does not:
 Owns:
 
 - Reading the roadmap and backlog.
-- Planning the current sprint.
+- Recommending sprint candidates.
 - Creating and updating `CURRENT_SPRINT.md`.
 - Creating GitHub Issues.
 - Tracking progress.
@@ -55,6 +58,7 @@ Cannot:
 
 - Write code.
 - Decide product direction.
+- Decide the next sprint.
 - Expand sprint scope without CEO approval.
 
 ### OpenClaw: Engineer
@@ -97,9 +101,11 @@ Hermes:
 
 1. Read `ROADMAP.md`.
 2. Read `BACKLOG.md`.
-3. Create or update `CURRENT_SPRINT.md`.
-4. Create or update GitHub Issues.
-5. Confirm the sprint has one goal, completion criteria, and non-goals.
+3. Recommend the next sprint.
+4. Wait for Founder approval.
+5. Create or update `CURRENT_SPRINT.md`.
+6. Create or update GitHub Issues.
+7. Confirm the sprint has one goal, completion criteria, and non-goals.
 
 ### Day
 
@@ -131,7 +137,8 @@ ChatGPT:
 
 1. Sammi approves or rejects merge.
 2. If merged, the sprint is marked complete.
-3. Hermes prepares the next sprint.
+3. Hermes recommends the next sprint.
+4. Sammi approves the next sprint.
 
 ## Sprint Lifecycle
 
@@ -179,6 +186,7 @@ Release note format:
 ## Hard Rules
 
 - AI agents do not decide product direction.
+- Hermes recommends the next sprint; the Founder approves it.
 - Agents read GitHub documents before acting.
 - `CURRENT_SPRINT.md` controls engineering scope.
 - Out-of-scope work must stop immediately.

@@ -4,7 +4,7 @@ The full lifecycle of one NextBite sprint.
 
 ---
 
-## 1. Sprint Planning (Hermes)
+## 1. Sprint Recommendation (Hermes)
 
 **Inputs:**
 - CEO priorities from Sammi
@@ -13,9 +13,8 @@ The full lifecycle of one NextBite sprint.
 - Previous sprint results from SPRINTS.md
 
 **Outputs:**
-- CURRENT_SPRINT.md (updated with new sprint scope)
-- GitHub Issues created, one per task
-- Labels applied: `sprint`, `sprint-000`
+- Recommended sprint scope
+- Recommended GitHub Issue list
 
 **Checklist:**
 - [ ] Sprint goal is one clear sentence
@@ -26,7 +25,27 @@ The full lifecycle of one NextBite sprint.
 
 ---
 
-## 2. Implementation (OpenClaw)
+## 2. Sprint Approval (CEO — Sammi)
+
+**Inputs:**
+- Hermes recommendation
+- ROADMAP.md
+- BACKLOG.md
+
+**Outputs:**
+- Approved sprint scope
+- CURRENT_SPRINT.md (updated by Hermes after approval)
+- GitHub Issues created by Hermes, one per approved task
+- Labels applied: `sprint`, `sprint-000`
+
+**Checklist:**
+- [ ] Founder approval is recorded
+- [ ] `CURRENT_SPRINT.md` matches approved scope
+- [ ] Issues match approved scope
+
+---
+
+## 3. Implementation (OpenClaw)
 
 **Inputs:**
 - CURRENT_SPRINT.md
@@ -49,7 +68,7 @@ The full lifecycle of one NextBite sprint.
 
 ---
 
-## 3. Validation (CI)
+## 4. Validation (CI)
 
 **Inputs:**
 - Pull Request
@@ -63,7 +82,7 @@ The full lifecycle of one NextBite sprint.
 
 ---
 
-## 4. Review (ChatGPT — CTO + QA)
+## 5. Review (ChatGPT — CTO + QA)
 
 **Inputs:**
 - Pull Request
@@ -86,7 +105,7 @@ The full lifecycle of one NextBite sprint.
 
 ---
 
-## 5. Approval (CEO — Sammi)
+## 6. Merge Approval (CEO — Sammi)
 
 **Inputs:**
 - PR with green CI
@@ -99,7 +118,7 @@ The full lifecycle of one NextBite sprint.
 
 ---
 
-## 6. Merge & Close
+## 7. Merge & Close
 
 **Actions:**
 - Merge PR to main
@@ -109,7 +128,7 @@ The full lifecycle of one NextBite sprint.
 
 ---
 
-## 7. Retrospective
+## 8. Retrospective
 
 - What went well?
 - What was blocked?

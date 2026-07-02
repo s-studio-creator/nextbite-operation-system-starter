@@ -1,6 +1,8 @@
 # Backlog
 
-Sprint-queued tasks that Hermes has prioritized for upcoming sprints.
+Sprint candidates that Hermes has organized for Founder review.
+
+Hermes may recommend priority, but the Founder approves what enters `CURRENT_SPRINT.md`.
 
 ---
 
@@ -91,8 +93,10 @@ Sprint-queued tasks that Hermes has prioritized for upcoming sprints.
 
 ## Process
 
-Hermes moves items from ICEBOX → BACKLOG → CURRENT_SPRINT.md as they are prioritized.
+Hermes organizes candidates from ICEBOX → BACKLOG.
+
+The Founder approves any move from BACKLOG → CURRENT_SPRINT.md.
 
 - **ICEBOX.md**: Long-term ideas, not yet prioritized
-- **BACKLOG.md**: Organized into future sprints, Hermes-managed
+- **BACKLOG.md**: Organized into future sprint candidates, Hermes-maintained
 - **CURRENT_SPRINT.md**: Active sprint, single source of truth for OpenClaw

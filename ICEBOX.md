@@ -2,7 +2,7 @@
 
 Long-term ideas and aspirations. Not prioritized. Not scheduled.
 
-Hermes reviews this periodically when backlog space opens.
+Hermes reviews this periodically and may recommend promotion to `BACKLOG.md`.
 
 ---
 
@@ -77,5 +77,6 @@ Hermes reviews this periodically when backlog space opens.
 ## Process
 
 - Ideas live here forever unless a sprint makes them real
-- Hermes may promote items to BACKLOG.md when they become relevant
-- CEO (Sammi) decides what gets promoted — never self-promote
+- Hermes may recommend items for `BACKLOG.md`
+- CEO (Sammi) decides what gets promoted
+- Ideas never self-promote into sprint scope

@@ -1,0 +1,31 @@
+name: Backlog / Icebox Candidate
+description: Suggest an idea for Founder review
+labels: ["idea"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem does this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: How might this work?
+  - type: dropdown
+    id: destination
+    attributes:
+      label: Suggested Destination
+      options:
+        - Backlog candidate
+        - Icebox
+        - Needs Founder decision
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: How does this affect users, architecture, or sprint focus?

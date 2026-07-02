@@ -6,6 +6,14 @@
 
 <!-- Closes #issue-number for each sprint task this PR resolves -->
 
+## Current Sprint
+
+<!-- Confirm the PR implements CURRENT_SPRINT.md only. -->
+
+- [ ] I read `CURRENT_SPRINT.md`
+- [ ] This PR implements only the approved sprint
+- [ ] This PR does not include backlog or icebox work
+
 ## Type of Change
 
 <!-- Select one -->

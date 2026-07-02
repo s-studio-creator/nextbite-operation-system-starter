@@ -17,12 +17,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Check for app package
+        id: app
+        run: |
+          if [ -f package.json ]; then
+            echo "has_package=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_package=false" >> "$GITHUB_OUTPUT"
+            echo "No package.json found. Skipping app validation for docs-only repository state."
+          fi
       - uses: actions/setup-node@v4
+        if: steps.app.outputs.has_package == 'true'
         with:
           node-version: 22
           cache: npm
       - run: npm ci
+        if: steps.app.outputs.has_package == 'true'
       - run: npm run typecheck
+        if: steps.app.outputs.has_package == 'true'
       - name: Post typecheck result
         if: always() && github.event_name == 'pull_request'
         uses: actions/github-script@v7
@@ -38,10 +50,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Check for app package
+        id: app
+        run: |
+          if [ -f package.json ]; then
+            echo "has_package=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_package=false" >> "$GITHUB_OUTPUT"
+            echo "No package.json found. Skipping Expo export for docs-only repository state."
+          fi
       - uses: actions/setup-node@v4
+        if: steps.app.outputs.has_package == 'true'
         with:
           node-version: 22
           cache: npm
       - run: npm ci
+        if: steps.app.outputs.has_package == 'true'
       - name: Check export compiles
+        if: steps.app.outputs.has_package == 'true'
         run: npx expo export --platform ios 2>&1 || echo "Export check skipped (may require native build)"
