@@ -6,9 +6,13 @@ This manual defines how human developers and AI agents should work in this repos
 
 The repository is the source of truth. Agents must read the relevant docs before making product, design, or architecture changes.
 
+The complete operating loop is documented in [`workflow/AI_OPERATING_SYSTEM.md`](../workflow/AI_OPERATING_SYSTEM.md).
+
 ## Team Structure
 
 - CEO: owns product priorities and roadmap.
+- Hermes: owns sprint planning and project management.
+- OpenClaw: owns engineering execution for the current sprint.
 - CTO: owns architecture and technical quality.
 - Engineer: implements production code.
 - Designer: owns UX consistency and design system alignment.
@@ -26,20 +30,25 @@ Agent role definitions live in [`docs/agents`](agents/).
 
 ## Communication Flow
 
-1. CEO defines priority and success criteria.
-2. CTO confirms architecture constraints and risk.
-3. Designer confirms UX principles and design-system impact.
-4. Engineer implements the smallest production-ready change.
-5. QA verifies behavior, regressions, and Definition of Done.
+1. Sammi defines what to build.
+2. Hermes turns the decision into `CURRENT_SPRINT.md` and GitHub Issues.
+3. OpenClaw implements only the current sprint.
+4. OpenClaw opens a pull request.
+5. ChatGPT reviews architecture, code, UX, and QA risk.
+6. Sammi approves or rejects merge.
+7. Hermes prepares the next sprint.
 
 ## Sprint Workflow
 
-1. Define Sprint Goal.
-2. List scope and non-goals.
-3. Implement only the agreed scope.
-4. Run verification.
-5. Record completed work, blockers, and demo link in [`SPRINTS.md`](SPRINTS.md).
-6. Update decisions or roadmap when scope changes.
+1. Ask: what is today's only goal?
+2. Ask: what counts as complete?
+3. Ask: what is not allowed?
+4. Hermes writes `CURRENT_SPRINT.md`.
+5. OpenClaw implements only that sprint.
+6. OpenClaw runs verification and opens a PR.
+7. ChatGPT reviews.
+8. Sammi approves merge.
+9. Hermes records sprint completion and prepares the next sprint.
 
 ## Definition of Done
 
@@ -61,6 +70,9 @@ A task is done when:
 - Do not use Expo Go for Mapbox validation; use a development build.
 - Keep changes small, reviewable, and scoped.
 - Preserve existing user work.
+- `CURRENT_SPRINT.md` is the engineering contract.
+- Backlog items are not sprint scope.
+- Icebox items are intentionally inactive.
 
 ## Engineering Principles
 

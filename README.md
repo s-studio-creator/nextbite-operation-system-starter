@@ -24,6 +24,8 @@ NextBite is a premium consumer mobile app for real-world food exploration. The p
 - `types/` - Shared TypeScript types.
 - `src/` - Existing legacy screens, storage, data, and utilities being consolidated over time.
 - `docs/` - Product, architecture, design, process, roadmap, and AI-agent operating documentation.
+- `workflow/` - AI operating loop and sprint process.
+- `prompts/` - Role prompts for Hermes, OpenClaw, and ChatGPT review.
 
 ## Development Setup
 
@@ -65,3 +67,7 @@ Mapbox does not run in Expo Go. Use a development build for device testing.
 - [Decisions](docs/DECISIONS.md)
 - [Sprints](docs/SPRINTS.md)
 - [Agent Roles](docs/agents/)
+- [AI Operating System](workflow/AI_OPERATING_SYSTEM.md)
+- [Current Sprint](CURRENT_SPRINT.md)
+- [Backlog](BACKLOG.md)
+- [Icebox](ICEBOX.md)
