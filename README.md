@@ -74,6 +74,28 @@ node scripts/hermes.mjs daily-report
 
 Use `--dry-run` to inspect the DeepSeek request without calling the API.
 
+### Telegram Hermes
+
+Create a bot with Telegram `@BotFather`, then add the token to `.env`:
+
+```sh
+TELEGRAM_BOT_TOKEN=your_telegram_bot_token
+```
+
+Check the connection:
+
+```sh
+node scripts/hermes-telegram.mjs --check
+```
+
+Run the local Telegram bot:
+
+```sh
+node scripts/hermes-telegram.mjs
+```
+
+Keep the Terminal window open while using Hermes in Telegram.
+
 ## Documentation
 
 - [Product Bible](docs/PRODUCT_BIBLE.md)
