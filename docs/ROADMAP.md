@@ -4,20 +4,21 @@ This roadmap uses milestones, not dates.
 
 ## Current Sprint
 
-### Explore Foundation
+### Sprint 001: Explore Foundation
 
-- Mapbox as permanent map engine.
-- User location permission.
-- User location display.
-- Camera follow behavior.
-- Mock restaurant markers.
-- Restaurant bottom sheet.
-- Walk There action.
+- App launches.
+- Mapbox map loads.
+- User grants location permission.
+- Current location is displayed.
+- Camera follows the user.
 
 ## Next Sprint
 
 ### Explore Product Quality
 
+- Restaurant markers.
+- Restaurant bottom sheet.
+- Walk There action.
 - Improve marker selection states.
 - Add better loading and permission states.
 - Add Mapbox development-build instructions.

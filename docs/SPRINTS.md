@@ -38,34 +38,47 @@ Use this template for every sprint.
 
 ## Current Sprint
 
+### Sprint
+
+Sprint 001: Explore Foundation
+
 ### Sprint Goal
 
-Establish Explore as the production foundation and create repository documentation for AI-first development.
+Make the Explore map foundation work on device.
 
 ### Scope
 
-- Mapbox Explore foundation.
-- Professional documentation system under `/docs`.
-- README pointing to source-of-truth docs.
+- App launches.
+- Mapbox map loads.
+- User grants location permission.
+- Current location is displayed.
+- Camera follows the user.
 
 ### Non-Goals
 
-- Backend integration.
+- Restaurant markers.
+- Restaurant bottom sheet.
+- Draw.
+- Saved.
+- Social.
+- Profile.
+- Backend.
 - Authentication.
-- Social implementation.
-- Profile implementation.
+- Search.
 - Product redesign.
 
 ### Definition of Done
 
-- TypeScript passes.
-- Documentation links resolve.
-- Important decisions are captured.
-- Repository structure is clear for future agents.
+- App launches successfully in a development build.
+- Mapbox map loads.
+- Location permission request works.
+- Current location is displayed.
+- Camera follows the user while moving.
+- 15 second screen recording is captured.
 
 ### Completed
 
-- Pending sprint closeout.
+- Not started.
 
 ### Blocked
 
@@ -73,8 +86,9 @@ Establish Explore as the production foundation and create repository documentati
 
 ### Notes
 
-- Mapbox requires a development build and public token.
+- Mapbox does not run in Expo Go.
+- `EXPO_PUBLIC_MAPBOX_ACCESS_TOKEN` must be configured.
 
 ### Demo Link
 
-- Not yet available.
+- Pending.
