@@ -6,18 +6,18 @@ Hermes may recommend priority, but the Founder approves what enters `CURRENT_SPR
 
 ---
 
-## Sprint 002 (Next)
+## Sprint 002 ✅ (Completed)
 
 ### Explore Product Quality
 
-- [ ] Restaurant markers on map
-- [ ] Restaurant bottom sheet
-- [ ] Walk There action
-- [ ] Improve marker selection states
-- [ ] Add better loading and permission states
-- [ ] Add Mapbox development-build instructions
-- [ ] Stabilize mock data shape for future backend
-- [ ] Add QA checklist for location flows
+- [x] Restaurant markers on map
+- [x] Restaurant bottom sheet
+- [x] Walk There action
+- [x] Improve marker selection states — selected marker scales up + darker color
+- [x] Add better loading and permission states — loading spinner, denied fallback with retry
+- [x] Migrate from @rnmapbox/maps to react-native-maps for Expo Go compatibility
+- [x] Stabilize mock data shape for future backend — added carbs, fat, price, highlights fields
+- [x] Add QA checklist for location flows — docs/QA_EXPLORE.md
 
 ### Repository Consolidation
 
@@ -27,7 +27,7 @@ Hermes may recommend priority, but the Founder approves what enters `CURRENT_SPR
 
 ---
 
-## Sprint 003 (Future)
+## Sprint 003 (Next)
 
 ### Restaurant Decision Flow
 

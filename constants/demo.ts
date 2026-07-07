@@ -7,6 +7,15 @@ export const hongKongCenter = {
   longitudeDelta: 0.035
 };
 
+export const hongKongAreas = [
+  { label: "Central", coordinate: { latitude: 22.2855, longitude: 114.1577 } },
+  { label: "Sheung Wan", coordinate: { latitude: 22.286, longitude: 114.150 } },
+  { label: "Wan Chai", coordinate: { latitude: 22.279, longitude: 114.177 } },
+  { label: "Causeway Bay", coordinate: { latitude: 22.280, longitude: 114.188 } },
+  { label: "Tsim Sha Tsui", coordinate: { latitude: 22.299, longitude: 114.171 } },
+  { label: "Mong Kok", coordinate: { latitude: 22.319, longitude: 114.169 } }
+] as const;
+
 export const demoRestaurants: RestaurantPreview[] = [
   {
     id: "yuzu-garden",
@@ -15,12 +24,16 @@ export const demoRestaurants: RestaurantPreview[] = [
     rating: 4.8,
     calories: 520,
     protein: 34,
+    carbs: 58,
+    fat: 16,
     distanceLabel: "8 min walk",
+    price: "$$",
     latitude: 22.2867,
     longitude: 114.1594,
     healthScore: 92,
     imageUrl: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=900&auto=format&fit=crop",
-    isHealthyPick: true
+    isHealthyPick: true,
+    highlights: ["高蛋白", "日式", "低卡"]
   },
   {
     id: "miso-lane",
@@ -29,11 +42,15 @@ export const demoRestaurants: RestaurantPreview[] = [
     rating: 4.6,
     calories: 680,
     protein: 28,
+    carbs: 72,
+    fat: 24,
     distanceLabel: "11 min walk",
+    price: "$$",
     latitude: 22.2881,
     longitude: 114.1557,
     imageUrl: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?q=80&w=900&auto=format&fit=crop",
-    healthScore: 78
+    healthScore: 78,
+    highlights: ["拉麵", "小食"]
   },
   {
     id: "green-hour",
@@ -42,12 +59,16 @@ export const demoRestaurants: RestaurantPreview[] = [
     rating: 4.7,
     calories: 440,
     protein: 31,
+    carbs: 48,
+    fat: 12,
     distanceLabel: "6 min walk",
+    price: "$$",
     latitude: 22.2837,
     longitude: 114.1548,
     healthScore: 88,
     imageUrl: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=900&auto=format&fit=crop",
-    isHealthyPick: true
+    isHealthyPick: true,
+    highlights: ["素食", "低卡", "沙律"]
   },
   {
     id: "toast-club",
@@ -56,11 +77,15 @@ export const demoRestaurants: RestaurantPreview[] = [
     rating: 4.5,
     calories: 610,
     protein: 24,
+    carbs: 66,
+    fat: 22,
     distanceLabel: "9 min walk",
+    price: "$",
     latitude: 22.286,
     longitude: 114.1532,
     healthScore: 81,
-    imageUrl: "https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=900&auto=format&fit=crop"
+    imageUrl: "https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=900&auto=format&fit=crop",
+    highlights: ["早午餐", "咖啡"]
   },
   {
     id: "protein-lab",
@@ -69,11 +94,67 @@ export const demoRestaurants: RestaurantPreview[] = [
     rating: 4.9,
     calories: 560,
     protein: 42,
+    carbs: 44,
+    fat: 18,
     distanceLabel: "13 min walk",
+    price: "$$",
     latitude: 22.2824,
     longitude: 114.1605,
     healthScore: 94,
     imageUrl: "https://images.unsplash.com/photo-1559847844-5315695dadae?q=80&w=900&auto=format&fit=crop",
-    isHealthyPick: true
+    isHealthyPick: true,
+    highlights: ["高蛋白", "健身友好", "低碳"]
+  },
+  {
+    id: "noodle-zen",
+    name: "Noodle Zen",
+    cuisine: "Vietnamese pho & rice",
+    rating: 4.4,
+    calories: 490,
+    protein: 26,
+    carbs: 62,
+    fat: 10,
+    distanceLabel: "7 min walk",
+    price: "$",
+    latitude: 22.285,
+    longitude: 114.156,
+    imageUrl: "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?q=80&w=900&auto=format&fit=crop",
+    healthScore: 85,
+    highlights: ["越式", "少油"]
+  },
+  {
+    id: "sea-basin",
+    name: "Sea Basin",
+    cuisine: "Seafood grill",
+    rating: 4.3,
+    calories: 720,
+    protein: 38,
+    carbs: 36,
+    fat: 32,
+    distanceLabel: "15 min walk",
+    price: "$$$",
+    latitude: 22.284,
+    longitude: 114.162,
+    imageUrl: "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?q=80&w=900&auto=format&fit=crop",
+    healthScore: 76,
+    highlights: ["海鮮", "鋁燒"]
+  },
+  {
+    id: "bowl-soul",
+    name: "Bowl Soul",
+    cuisine: "Healthy grain bowls",
+    rating: 4.7,
+    calories: 470,
+    protein: 30,
+    carbs: 52,
+    fat: 14,
+    distanceLabel: "5 min walk",
+    price: "$$",
+    latitude: 22.2863,
+    longitude: 114.158,
+    imageUrl: "https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=900&auto=format&fit=crop",
+    healthScore: 91,
+    isHealthyPick: true,
+    highlights: ["低卡", "高蛋白", "沙律"]
   }
 ];

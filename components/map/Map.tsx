@@ -1,48 +1,65 @@
-import Mapbox, { Camera, UserTrackingMode } from "@rnmapbox/maps";
-import { forwardRef } from "react";
+import MapView, { Region } from "react-native-maps";
+import { forwardRef, useCallback } from "react";
 import { StyleSheet } from "react-native";
 import { hongKongCenter } from "../../constants/demo";
-import { mapboxStyleURL } from "../../constants/mapbox";
 import { Coordinates, RestaurantPreview } from "../../types/restaurant";
 import { RestaurantMarker } from "./RestaurantMarker";
 
-export type MapCameraRef = Camera;
+export type MapCameraRef = MapView;
 
 type MapProps = {
   restaurants: RestaurantPreview[];
   centerCoordinate?: Coordinates;
   followUserLocation: boolean;
+  selectedRestaurantId?: string;
   onRestaurantPress?: (restaurant: RestaurantPreview) => void;
+  onMapPress?: () => void;
 };
 
 export const Map = forwardRef<MapCameraRef, MapProps>(function Map(
-  { restaurants, centerCoordinate = hongKongCenter, followUserLocation, onRestaurantPress },
+  { restaurants, centerCoordinate = hongKongCenter, followUserLocation, selectedRestaurantId, onRestaurantPress, onMapPress },
   ref
 ) {
+  const region: Region = {
+    latitude: centerCoordinate.latitude,
+    longitude: centerCoordinate.longitude,
+    latitudeDelta: 0.035,
+    longitudeDelta: 0.035
+  };
+
+  const handleMarkerPress = useCallback(
+    (restaurant: RestaurantPreview) => {
+      onRestaurantPress?.(restaurant);
+    },
+    [onRestaurantPress]
+  );
+
+  const handleMapPress = useCallback(() => {
+    onMapPress?.();
+  }, [onMapPress]);
+
   return (
-    <Mapbox.MapView
-      attributionEnabled={false}
-      compassEnabled={false}
-      logoEnabled={false}
-      scaleBarEnabled={false}
+    <MapView
+      ref={ref}
+      initialRegion={region}
       style={StyleSheet.absoluteFillObject}
-      styleURL={mapboxStyleURL}
+      showsUserLocation={true}
+      followsUserLocation={followUserLocation}
+      showsCompass={false}
+      showsScale={false}
+      mapPadding={{ top: 80, right: 0, bottom: 260, left: 0 }}
+      rotateEnabled={false}
+      toolbarEnabled={false}
+      onPress={handleMapPress}
     >
-      <Mapbox.Camera
-        ref={ref}
-        animationDuration={500}
-        animationMode="easeTo"
-        centerCoordinate={[centerCoordinate.longitude, centerCoordinate.latitude]}
-        followPadding={{ paddingBottom: 260, paddingLeft: 0, paddingRight: 0, paddingTop: 80 }}
-        followUserLocation={followUserLocation}
-        followUserMode={UserTrackingMode.Follow}
-        followZoomLevel={15}
-        zoomLevel={15}
-      />
-      <Mapbox.LocationPuck pulsing={{ color: "#E73D2F", isEnabled: true, radius: 42 }} puckBearing="course" puckBearingEnabled />
       {restaurants.map((restaurant) => (
-        <RestaurantMarker key={restaurant.id} restaurant={restaurant} onPress={onRestaurantPress} />
+        <RestaurantMarker
+          key={restaurant.id}
+          restaurant={restaurant}
+          selected={restaurant.id === selectedRestaurantId}
+          onPress={handleMarkerPress}
+        />
       ))}
-    </Mapbox.MapView>
+    </MapView>
   );
 });

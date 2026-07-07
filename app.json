@@ -25,13 +25,7 @@
           "locationWhenInUsePermission": "Use your location to explore nearby restaurants on the map."
         }
       ],
-      "expo-image-picker",
-      [
-        "@rnmapbox/maps",
-        {
-          "RNMapboxMapsVersion": "11.20.1"
-        }
-      ]
+      "expo-image-picker"
     ]
   }
 }

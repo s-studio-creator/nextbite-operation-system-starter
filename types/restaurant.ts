@@ -10,8 +10,12 @@ export type RestaurantPreview = Coordinates & {
   rating: number;
   calories: number;
   protein: number;
+  carbs?: number;
+  fat?: number;
   distanceLabel: string;
+  price?: "$" | "$$" | "$$$" | "$$$$";
   healthScore?: number;
   imageUrl?: string;
   isHealthyPick?: boolean;
+  highlights?: string[];
 };
